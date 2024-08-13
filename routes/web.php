@@ -15,9 +15,10 @@ Route::view('profile', 'profile')
 
 
 // my things
-Volt::route('create-student', 'main.createstudent');
+Volt::route('create-student', 'pages.main.createstudent');
+Volt::route('select-department', 'pages.main.select-department');
 
-Volt::route('addmarks/{classRoomId}/{classRoomUnitId}/{examId}', 'main.add-marks')->name('add.scores');
-Volt::route('viewmarks/{classRoomId}/{classRoomUnitId}/{examId}', 'main.view-marks')->name('view.scores');
+Volt::route('addmarks/{classRoomId}/{classRoomUnitId}/{examId}', 'pages.main.add-marks')->name('add.scores');
+Volt::route('viewmarks/{classRoomId}/{classRoomUnitId}/{examId}', 'pages.main.view-marks')->name('view.scores');
 
 require __DIR__.'/auth.php';

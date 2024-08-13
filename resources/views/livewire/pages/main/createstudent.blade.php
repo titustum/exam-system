@@ -87,7 +87,11 @@ class extends Component {
         <!-- Gender -->
         <div>
             <x-input-label for="gender" :value="__('Gender')" />
-            <x-text-input wire:model="gender" id="gender" class="block mt-1 w-full" type="text" name="gender" required />
+            <select wire:model="gender" id="gender" class="block mt-1 w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm" type="text" name="gender" required>
+                <option value="">Choose ...</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
             <x-input-error :messages="$errors->get('gender')" class="mt-2" />
         </div>
         <!-- Department -->
